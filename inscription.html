@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UP WORK</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal|Dosis|Open+Sans">
+
+		<!-- CSS Vendor -->
+		<script src="https://kit.fontawesome.com/39419a7229.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/flexslider.css">
+		<!-- CSS Perso -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Perso JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+	</head>
+	<body>
+		<!--HEADER-->
+		<header>
+			<section id="logo">
+				<a href="index.html">
+					<img src="img/logo.png" alt="Work up" />
+				</a>
+				<a href="#" id="pub">
+					Publier une offre
+				</a>
+				<section id="connect">
+					<a>Se connecter</a>
+					<a href="inscription.html">S'inscrire</a>
+				</section>
+			</section>
+			
+			<section id="topbar">
+				<nav>	
+				<a href="about.html">Pourquoi UpWork</a>	
+				<a href="#">Mission</a>
+				<a href="#">Message</a>
+				<a href="#">Statistique</a>
+				<a href="#">Epicerie</a>	
+				</nav>
+			</section>
+		</header>
+		<!--MAIN CONTENT-->
+		
+		<main class="container">
+			<h1>Inscription <script></script></h1>
+
+		<section id="identification">
+		<form class="form" action="#">	
+		<ul>
+			<li>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email">
+			</li>
+			<li>
+				<label for="password">Mot de passe</label>
+				<input id="password" name="passpord" type="password">
+			</li>
+			</li>
+			<li>
+				<input type="button" value="ok" id="btn_ok" >
+			</li>
+		</ul>
+		</form>
+		</section>
+			
+			<section id="form">
+				<h2>A propos de vous</h2>
+                <article>
+                    <ul>
+                    <form class="form" action="add.php" method="POST">
+                                <li>
+                                    <fieldset>
+                                        <legend>Choisir catégorie de service</legend>
+                                        <input id="cat" type="checkbox" name="services" value="1">
+                                        <label for="cat" class="cat ">Développeur Web Back-end</label>
+
+                                        <input id="cat" type="checkbox" name="services" value="1">
+                                        <label for="cat" class="cat ">Développeur Web Front-end</label>
+
+                                        <input id="cat" type="checkbox" name="services" value="1">
+                                        <label for="cat" class="cat ">Webmaster</label>
+
+                                        <input id="cat" type="checkbox" name="services" value="1">
+                                        <label for="cat" class="cat ">Designer</label>
+
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+                                    <fieldset>
+                                        <legend>choisir les savoir-faire</legend>
+                                        <input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">MySQL</label>
+
+                                        <input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">PHP</label>
+
+                                        <input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">Angular JS</label>
+
+                                        <input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">MangoDB</label>
+
+										<input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">SQL+</label>
+
+										<input id="cat" type="checkbox" name="skills[]" value="1">
+                                        <label for="cat" class="cat ">Phyton</label>
+
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+                                    <fieldset>
+										<label for="diploma">Votre diplôme :</label>
+                                        <select name="diploma">
+											<option value="5">Ingénieur</option>
+                                        	<option value="4">Master</option>
+											<option value="3">Licence</option>
+											<option value="2">Technicien</option>
+											<option value="1">Bac</option>
+										</select>
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+									<label for="experience">Votre niveau d'expérience :</label>
+									<select name="experience">
+										<option value="1">1 à 2 ans</option>
+										<option value="2"> 5 à 10 ans</option>
+										<option value="3">+ de 10</option>
+									</select>
+								</li>	
+								<li>
+                                    <fieldset>
+                                        <legend>Languages</legend>
+                                        <input id="languages" type="checkbox" name="languages[]" value="1">
+                                        <label for="languages" class="cat ">anglais</label>
+
+                                        <input id="languages" type="checkbox" name="languages[]" value="1">
+                                        <label for="languages" class="cat ">Francais</label>
+
+                                        <input id="languages" type="checkbox" name="languages[]" value="1">
+                                        <label for="languages" class="cat ">Autres</label>
+
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+                                    <label for="tarif">Cout par heure</label>
+                                    <input id="tarif" name="tarif" type="text">
+                                </li>
+                                <li>
+                                    <label for="title">Titre de votre profil</label>
+                                    <input id="title" name="title" type="text">
+                                </li>
+								<li>
+                                    <label for="description">Déscription</label>
+                                    <textarea id="city" name="title" type="textarea"></textarea>
+                                </li>
+
+                                <li>
+                                    <label for="city">Ville</label>
+                                    <input id="city" name="city" type="text">
+                                    
+                                </li>
+								<li>
+                                    <label for="pict">Photo</label>
+                                    <input id="pict" name="pict" type="file">
+                                    
+                                </li>
+								<li>
+                                    <label for="tel">Téléphone</label>
+                                    <input id="tel" name="tel" type="text">
+                                    
+                                </li>
+								<li>
+                                    <label for="address">Adresse/Localisation</label>
+                                    <input id="address" name="address" type="textarea">
+                                    
+                                </li>
+                                <input type="button" value="Enregistrer" id="btn_enregistrer">
+                            </form>
+                            </ul>
+                    
+                </article>
+			</section>
+			<script src="js/main.js"></script>
+		</main>
+		<!--FOOTER-->
+		<footer>
+			<section id="bottombar">
+				<article>
+					<small>Développeur Web</small>
+				</article>
+				<article>
+					<small>Design</small>
+				</article>
+				<article>
+					<small>Intégrateur Web</small>
+				</article>
+				<article>
+					<small>Community Manager</small>
+				</article>
+				<article>
+					<small>Webmaster</small>
+				</article>
+			</section>
+			<section id="info">
+				<article>
+					<h2>En direct du blog </h2>
+					<ul>
+						<li>Top 7 des distributions Linux incontournables en 2021</li>
+		    			<li>5 conseils pour rédiger un compte-rendu de réunions</li>
+		    			<li>10 techniques pour promouvoir vos articles de blog</li>
+		    			<li>Experience map : cartographier l’expérience utilisateur en 6 étapes</li>
+		    			<li>Le retro-marketing, ou quand la nostalgie revient à la mo</li>
+		    			<li>4 moyens pour obtenir des traductions</li>
+					</ul>
+				</article>
+				<article>
+					<h2>Suivez-nous !</h2>
+					<ul>
+						<li><i class="fab fa-facebook"></i></li>
+		    			<li><i class="fab fa-twitter"></i></li>
+		    			<li><i class="fab fa-instagram-square"></i></li>
+		    			<li><i class="fab fa-linkedin-in"></i></li>
+					</ul>
+				</article>
+			</section>
+		</footer>
+	</body>
+</html>

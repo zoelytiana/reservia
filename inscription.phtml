@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UP WORK</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal|Dosis|Open+Sans">
+
+		<!-- CSS Vendor -->
+		<script src="https://kit.fontawesome.com/39419a7229.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/flexslider.css">
+		<!-- CSS Perso -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Perso JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+
+        <!-- Evenements du carnet d'adresses -->
+    <script src="js/events.js"></script>
+
+	</head>
+	<body>
+		<!--HEADER-->
+		<header>
+			<?php include('entete.php'); 
+			?>
+		</header>
+		<!--MAIN CONTENT-->
+		
+		<main class="container">
+			<h1>Inscription <script></script></h1>
+
+        <hr>
+
+		<section id="identification">
+		<form class="form" method="POST" >	
+		<ul>
+            <li>
+				<label for="userName">Nom Utilisateur</label>
+				<input id="userName" name="userName" type="text">
+			</li>
+			<li>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email">
+			</li>
+			</li>
+			<li>
+            La création d'un compte implique que vous avez lu et accepté les termes et conditions d'utilisation.
+				<input type="button" value="S'inscrire" id="btn_ok"> 
+			</li>
+		</ul>
+		</form>
+		</section>
+			
+			<section>
+				<h2>A propos de vous 
+				<span id="session"></span>
+				</h2>
+				
+                <article>
+                    
+                    <form id="form" action="createCompte.php" method="POST" enctype="multipart/form-data">
+					<ul>
+                                <li>
+                                    <label for="name">Nom </label>
+                                    <input id="name" name="name" type="text">
+                                </li>
+								<li>
+                                    <label for="presentation">Présentation</label>
+                                    <textarea id="presentation" name="presentation" type="textarea"></textarea>
+                                </li>
+
+                                <li>
+                                    <label for="city">Ville</label>
+                                    <input id="city" name="city" type="text">
+                                    
+                                </li>
+								<li>
+							
+                                    <label for="picture">Photo</label>
+                                    <input id="picture" name="picture" type="file">
+                                    
+                                </li>
+								<li>
+                                    <label for="numSecu">Numéro de sécurité</label>
+                                    <input id="numSecu" name="numSecu" type="text">
+                                    
+                                </li>
+								<li>
+                                    <label for="tel">Téléphone</label>
+                                    <input id="tel" name="tel" type="text">
+                                    
+                                </li>
+								<li>
+                                    <label for="address">Adresse/Localisation</label>
+                                    <textarea id="address" name="address" type="textarea"></textarea>
+                                </li>
+								<li>
+                                    <label for="tarif">Cout par heure</label>
+                                    <input id="tarif" name="tarif" type="text">
+                                </li>
+								<li>
+
+								<?php include('categorie.php'); ?>
+								<?php if(empty($categories) == false): ?>
+								<fieldset>
+                                        <legend>Choisir le catégorie de service</legend>
+										<?php foreach($categories as $categorieData): ?>
+										<input id="<?=$categorieData['nameService']?>" data-index="<?=$categorieData['idService']?>" class="service" type="radio" name="service" value="<?=$categorieData['idService']?>">
+										<label for="<?=$categorieData['nameService']?>"><?=$categorieData['nameService']?></label>
+										<?php endforeach ?>
+                                </fieldset>
+								
+                                    
+                                </li>
+								<li id="savoir">
+                                    
+                                    
+                                </li>
+								<?php endif ?>
+								<li>
+                                    <fieldset>
+										<label for="diploma">Diplôme :</label>
+                                        <select name="diploma">
+											<option value="5">Ingénieur</option>
+                                        	<option value="4">Master</option>
+											<option value="3">Licence</option>
+											<option value="2">Technicien</option>
+											<option value="1">Bac</option>
+										</select>
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+								<fieldset>
+									<label for="experience">Niveau d'expérience :</label>
+									<select name="experience">
+										<option value="1">1 à 2 ans</option>
+										<option value="2"> 5 à 10 ans</option>
+										<option value="3">+ de 10</option>
+									</select>
+									</fieldset>
+								</li>	
+								<li>
+                                    <fieldset>
+                                        <legend>Languages</legend>
+                                        <input id="languagesAng" type="checkbox" name="languages[]" value="1">
+                                        <label for="languagesAng" class="cat ">anglais</label>
+
+                                        <input id="languagesFr" type="checkbox" name="languages[]" value="1">
+                                        <label for="languagesFr" class="cat ">Francais</label>
+
+                                        <input id="languagesAu" type="checkbox" name="languages[]" value="1">
+                                        <label for="languagesAu" class="cat ">Autres</label>
+
+                                    </fieldset>
+                                    
+                                </li>
+								<li>
+									<label for="password">Mot de passe</label>
+									<input id="password" name="password" type="password">
+								</li>
+                                <input type="submit" value="Enregistrer" id="btn_enregistrer">
+								</ul>
+                            </form>
+							<div id="erreur"></div>
+                    
+                    
+                </article>
+			</section>
+			<script src="js/main.js"></script>
+		</main>
+		<!--FOOTER-->
+		<footer>
+			<?php include('pied.php'); ?>	
+		</footer>
+        <!-- Code principal -->
+    <script src="js/main.js"></script>
+	</body>
+</html>
